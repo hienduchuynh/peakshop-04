@@ -91,6 +91,7 @@
   margin: 0;
   font-size: 3.6rem;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 1200px) {
@@ -270,8 +271,6 @@ header > span {
 
 .article-template__comments-comment p {
   margin: 0;
-  padding: var(--grid-desktop-vertical-spacing);
-  background-color: rgba(0,0,0,0.06);
   font-size: 1.3rem;
 }
 
@@ -284,11 +283,7 @@ header > span {
   margin-bottom: 4rem;
 }
 
-.article-template__comments-fields .field::after {
-  box-shadow: none;
-  border: 0;
-}
-
+.article-template__comments-fields .field::after,
 .article-template__comments-fields .field:hover.field:after {
   box-shadow: none;
   border: 0;
@@ -296,13 +291,6 @@ header > span {
 
 .article-template__comments-fields .field__input:focus {
   box-shadow: none;
-}
-
-.article-template__comments-fields input,
-.article-template__comments-fields textarea {
-  border: 2px solid #ececec;
-  height: 5.6rem;
-  padding: 1.3rem 1.6rem;
 }
 
 .article-template__comments-fields input:focus,
@@ -352,8 +340,10 @@ header > span {
 }
 
 .article-template__comment-wrapper .field__label {
-  top: 0;
-  left: 0;
-  position: relative;
-  display: inline;
+  position: unset;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  line-height: 1;
+  transform: unset;
 }
