@@ -1,5 +1,5 @@
 .customer {
-  color: rgba(var(--color-foreground),1);
+  color: rgba(var(--color-foreground), 1);
   padding: 3.2rem 1.5rem;
 }
 
@@ -15,8 +15,10 @@
   --color-background: 0, 0, 0;
   --color-foreground: 255, 255, 255;
   background: rgba(var(--color-background));
-  -webkit-box-shadow: -2.4rem 0 0 rgba(var(--color-background)),2.4rem 0 0 rgba(var(--color-background));
-  box-shadow: -2.4rem 0 0 rgba(var(--color-background)),2.4rem 0 0 rgba(var(--color-background));
+  -webkit-box-shadow: -2.4rem 0 0 rgba(var(--color-background)),
+    2.4rem 0 0 rgba(var(--color-background));
+  box-shadow: -2.4rem 0 0 rgba(var(--color-background)),
+    2.4rem 0 0 rgba(var(--color-background));
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   color: rgba(var(--color-foreground));
@@ -38,8 +40,8 @@
   text-align: center;
 }
 
-
-.btn-signin:hover, .btn-register:hover {
+.btn-signin:hover,
+.btn-register:hover {
   opacity: 0.85;
 }
 
@@ -51,7 +53,7 @@
 
 @media screen and (min-width: 750px) {
   .customer:not(.account):not(.order):not(.addresses) {
-    max-width: 50rem;
+    max-width: 70rem;
   }
 }
 
@@ -101,12 +103,9 @@
   margin: 2rem 0;
 }
 
-.customer .field {
-  margin: 2rem 0 0 0;
-}
-
-.customer .field:first-of-type {
-  margin-top: 0;
+.customer .field input:focus,
+.customer .field input:not(:placeholder-shown) {
+  padding: 1.7rem 1.6rem;
 }
 
 /* Customer Table */
@@ -261,7 +260,7 @@
 /* works around colspan phantom border issues */
 .customer thead::after,
 .customer tfoot::before {
-  content: ' ';
+  content: " ";
   height: 0.1rem;
   width: 100%;
   display: block;
@@ -368,7 +367,7 @@
 }
 
 .customer .pagination li [aria-current]::after {
-  content: '';
+  content: "";
   display: block;
   width: 2rem;
   height: 0.01rem;
@@ -388,13 +387,24 @@
   width: fit-content;
 }
 
-.login a[href='#recover'] {
+.login a[href="#recover"] {
   margin-left: 0;
   margin-right: 0;
 }
 
 .login .field + a {
   margin-top: 1rem;
+}
+
+.field-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.field-wrap label {
+  margin-bottom: 1rem;
 }
 
 .login p {
@@ -446,9 +456,9 @@
 
 #create_account {
   text-decoration: none;
-  transition: all .35s;
+  transition: all 0.35s;
   opacity: 1;
-  width:  unset;
+  width: unset;
   text-transform: uppercase;
   flex: 1;
 }
@@ -458,7 +468,6 @@
   color: var(--gradient-base-background-1);
 }
 
-
 /* ===== Reset Password
 ========================= */
 
@@ -467,7 +476,8 @@
   display: none;
 }
 
-#recover:target, .form__message:focus-visible {
+#recover:target,
+.form__message:focus-visible {
   box-shadow: none;
   border: 0;
   outline: 0;
@@ -505,15 +515,18 @@
 /* ===== Detail Account
 ======================== */
 
-.activate button[name='decline'],
+.activate button[name="decline"],
 .addresses li > button,
 .addresses form button[type] {
-  background-color: rgba(var(--color-background), var(--alpha-button-background));
+  background-color: rgba(
+    var(--color-background),
+    var(--alpha-button-background)
+  );
   color: rgb(var(--color-link));
 }
 
 @media only screen and (min-width: 750px) {
-  .activate button[name='decline'] {
+  .activate button[name="decline"] {
     margin-top: inherit;
     margin-left: 1rem;
   }
@@ -573,7 +586,7 @@
   }
 }
 
-.account  div:first-child {
+.account div:first-child {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -582,7 +595,7 @@
 
 @media screen and (max-width: 990px) {
   .account div:first-child {
-    margin-bottom: calc(var(--grid-desktop-vertical-spacing)/2);
+    margin-bottom: calc(var(--grid-desktop-vertical-spacing) / 2);
   }
 }
 
@@ -628,7 +641,7 @@
 
 .account .btn-logout:hover {
   color: var(--gradient-base-background-1);
-  opacity: .85;
+  opacity: 0.85;
 }
 
 .account .customer-address-default {
@@ -801,9 +814,14 @@
 /* ===== Addresses
 ======================== */
 
+#AddAddress,
+.edit-address {
+  max-width: 96rem;
+}
+
 .addresses > a {
   display: block;
-  margin-top: calc(var(--grid-desktop-vertical-spacing)/2);
+  margin-top: calc(var(--grid-desktop-vertical-spacing) / 2);
 }
 
 .addresses li > button {
@@ -826,8 +844,8 @@
   margin-right: 1rem;
 }
 
-label[for='AddressCountryNew'],
-label[for='AddressProvinceNew'] {
+label[for="AddressCountryNew"],
+label[for="AddressProvinceNew"] {
   display: block;
   font-size: 1.4rem;
   margin-bottom: 0.6rem;
@@ -860,11 +878,11 @@ li[data-address] {
   text-align: left;
 }
 
-.addresses [aria-expanded='false'] ~ div[id] {
+.addresses [aria-expanded="false"] ~ div[id] {
   display: none;
 }
 
-.addresses [aria-expanded='true'] ~ div[id] {
+.addresses [aria-expanded="true"] ~ div[id] {
   display: block;
 }
 
@@ -872,7 +890,8 @@ li[data-address] {
   text-align: left;
 }
 
-li[data-address] > h2, .edit-address > h2 {
+li[data-address] > h2,
+.edit-address > h2 {
   text-align: left;
 
   margin-bottom: 0;
@@ -882,7 +901,7 @@ li[data-address] > h2, .edit-address > h2 {
   margin-bottom: 0;
 }
 
-.addresses input[type='checkbox'] {
+.addresses input[type="checkbox"] {
   margin-top: 2rem;
   margin-left: 0;
 }
@@ -931,8 +950,6 @@ li[data-address] > h2, .edit-address > h2 {
   border: 0;
 }
 
-
 .customer input:focus {
   box-shadow: none !important;
 }
-
