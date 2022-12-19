@@ -195,7 +195,7 @@
 
 @media screen and (min-width: 950px) {
   .faqs-page .collapsible-content__wrapper {
-    max-width: 66.66%;
+    max-width: 96rem;
   }
 }
 
