@@ -211,7 +211,7 @@
         --buttons-shadow-vertical-offset: {{ settings.buttons_shadow_vertical_offset }}px;
         --buttons-shadow-blur-radius: {{ settings.buttons_shadow_blur }}px;
         --buttons-border-offset: {% if settings.buttons_radius > 0 or settings.buttons_shadow_opacity > 0 %}
-          0.3{% else %}
+          0{% else %}
           0{% endif %}px;
 
         --inputs-radius: {{ settings.inputs_radius }}px;
@@ -292,7 +292,8 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  </head>
+  {% render "rafp-render" %} <!-- roartheme: FontPicker app -->
+</head>
 
   <body class="gradient page-{{ template | handleize }} page-header-{{ settings.header_layout }}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
