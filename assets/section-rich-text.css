@@ -114,9 +114,8 @@
 }
 
 .about-us .rich-text__blocks > img {
-  border: var(--text-boxes-border-width) solid
-    rgba(var(--color-foreground), var(--text-boxes-border-opacity));
-}
+  border: var(--text-boxes-border-width) solid rgba(var(--color-foreground), var(--text-boxes-border-opacity))
+} 
 
 /* FAQ */
 .faqs-page .rich-text {
@@ -162,8 +161,4 @@
   .landing-email-signup .rich-text__heading {
     font-size: 3.6rem;
   }
-}
-
-.faqs-page .rich-text__wrapper.rich-text__wrapper--left {
-  margin: 0;
 }
