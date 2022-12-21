@@ -35,19 +35,19 @@ body.page-header-05.open-header-05 .header-wrapper {
     width: 320px;
 }
 
-body.page-header-05 .header-wrapper .icon-close {
+body.page-header-05 .header-wrapper > .off-canvas .icon-close {
     display: none;
 }
 
-body.page-header-05 .header-wrapper .icon-hamburger {
+body.page-header-05 .header-wrapper > .off-canvas .icon-hamburger {
     display: block;
 }
 
-body.page-header-05.open-header-05 .header-wrapper .icon-close {
+body.page-header-05.open-header-05 .header-wrapper > .off-canvas .icon-close {
     display: block;
 }
 
-body.page-header-05.open-header-05 .header-wrapper .icon-hamburger {
+body.page-header-05.open-header-05 .header-wrapper > .off-canvas .icon-hamburger {
     display: none;
 }
 
