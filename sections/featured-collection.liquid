@@ -217,32 +217,30 @@
 </div>
 
 {% javascript %}
-if (document.getElementsByClassName("marquee-group").length) {
-  const _getposy = document.querySelector(".collection .marquee");
-  const _getposl = document.querySelector(".collection .marqueee");
+const _getposy = document.querySelector(".collection .marquee");
+const _getposl = document.querySelector(".collection .marqueee");
 
-  const _config = {
-    speed: 1,
-    ease: 1
-  }
-
-  window.addEventListener("scroll", function() {
-    let pageY = window.pageYOffset;
-    let bodyRect = _getposy.getBoundingClientRect();
-    let bodyRectl = _getposl.getBoundingClientRect();
-    //--
-    gsap.to('.collection .marqueee', {
-      duration:_config.speed,
-      x: -(pageY-(bodyRectl.top - window.innerWidth))/2,
-      ease: _config.ease
-    });
-    gsap.to(".collection .marquee", {
-      duration:_config.speed,
-      x: -(pageY-(bodyRectl.top - window.innerWidth))/3,
-      ease: _config.ease
-    });
-  })
+const _config = {
+  speed: 1,
+  ease: 1
 }
+
+window.addEventListener("scroll", function() {
+  let pageY = window.pageYOffset;
+  let bodyRect = _getposy.getBoundingClientRect();
+  let bodyRectl = _getposl.getBoundingClientRect();
+  //--
+  gsap.to('.collection .marqueee', {
+    duration:_config.speed,
+    x: -(pageY-(bodyRectl.top - window.innerWidth))/2,
+    ease: _config.ease
+  });
+  gsap.to(".collection .marquee", {
+    duration:_config.speed,
+    x: -(pageY-(bodyRectl.top - window.innerWidth))/3,
+    ease: _config.ease
+  });
+})
 
 {% endjavascript %}
 
