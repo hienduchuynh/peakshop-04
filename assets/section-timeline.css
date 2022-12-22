@@ -6,7 +6,7 @@
 }
 
 .timeline::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 2px;
   background: rgba(var(--color-foreground));
@@ -23,7 +23,7 @@
 }
 
 .container {
-  padding: 24px 0;
+  padding: 24px 0 ;
   position: relative;
   background: inherit;
   display: flex;
@@ -52,22 +52,19 @@
   padding: 30px;
   background: rgba(var(--color-base-background-1));
   position: relative;
-  border: var(--text-boxes-border-width) solid
-    rgba(var(--color-foreground), var(--text-boxes-border-opacity));
+  border: var(--text-boxes-border-width) solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
 }
 
 .timeline .container .date {
-  margin-bottom: calc(var(--grid-desktop-vertical-spacing) / 3);
+  margin-bottom: calc(var(--grid-desktop-vertical-spacing)/3);
 }
 
 .timeline .container .content h2 {
   --color-background: 0, 0, 0;
   --color-foreground: 255, 255, 255;
   background: rgba(var(--color-background));
-  -webkit-box-shadow: -2.4rem 0 0 rgba(var(--color-background)),
-    2.4rem 0 0 rgba(var(--color-background));
-  box-shadow: -2.4rem 0 0 rgba(var(--color-background)),
-    2.4rem 0 0 rgba(var(--color-background));
+  -webkit-box-shadow: -2.4rem 0 0 rgba(var(--color-background)), 2.4rem 0 0 rgba(var(--color-background));
+  box-shadow: -2.4rem 0 0 rgba(var(--color-background)), 2.4rem 0 0 rgba(var(--color-background));
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   color: rgba(var(--color-foreground));
@@ -91,14 +88,13 @@
 
 /* Icon */
 .timeline .container .content::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
   top: calc(50% - 8px);
   background: #ffffff;
-  border: var(--text-boxes-border-width) solid
-    rgba(var(--color-foreground), var(--text-boxes-border-opacity));
+  border: var(--text-boxes-border-width) solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));
   border-radius: 16px;
   z-index: 1;
 }
@@ -112,7 +108,7 @@
 }
 
 .timeline .container .content::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 40px;
   height: 2px;
@@ -129,7 +125,7 @@
   right: -40px;
 }
 
-@media screen and (max-width: 1499px) {
+@media screen and (max-width: 1199px) {
   .content {
     max-width: 100%;
   }
@@ -141,7 +137,8 @@
   }
 }
 
-@media screen and (max-width: 989px) {
+@media screen and (max-width: 749px) {
+
   .timeline .container {
     flex-direction: column;
     gap: 4.8rem;
@@ -161,8 +158,10 @@
     height: auto;
   }
 
-  .timeline .container .content::after,
+  .timeline .container .content::after, 
   .timeline .container .content::before {
     display: none;
   }
+
 }
+

@@ -144,15 +144,18 @@
   text-transform: uppercase;
 }
 
+.faqs-page .rich-text__heading:after {
+  display: none;
+}
+
 @media screen and (max-width: 750px) {
   .faqs-page .rich-text__wrapper {
     padding: 0;
   }
 }
-
-.faqs-page .rich-text__heading:after {
-  display: none;
-}
+/* .faqs-page .rich-text__text {
+  margin-left: -2.4rem;
+} */
 
 /* Landing Page */
 @media screen and (min-width: 750px) {
