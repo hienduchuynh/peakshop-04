@@ -1541,7 +1541,7 @@ summary::-webkit-details-marker {
 	}
 	.slider--tablet.grid--peek.grid--1-col-tablet-down .grid__item,
 	.slider--mobile.grid--peek.grid--1-col-tablet-down .grid__item {
-		width: calc(100% - var(--grid-mobile-horizontal-spacing) - 1.5rem);
+		width: calc(100%);
 	}
 }
 
@@ -2687,6 +2687,13 @@ input[type='checkbox'] {
 .shopify-section-header-sticky {
 	position: sticky;
 	top: 0;
+}
+.section-header.menu-open.shopify-section-header-sticky{ 
+	z-index: 7;
+}
+.section-header.menu-open:not(.shopify-section-header-sticky){ 
+	z-index: 7;
+	position: relative;
 }
 
 .shopify-section-header-hidden {
